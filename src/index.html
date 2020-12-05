@@ -1,3 +1,6 @@
+<!--
+  index.html è la pagina di ingresso della nostra applicazione
+-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,3 +14,53 @@
   <app-root></app-root>
 </body>
 </html>
+<!--
+  I VARI TIPI DI BINDING
+  I binding sono gli strumenti che mette a disposizione Angular per gestire il flusso di dati
+  che possono andare dal component al DOM oppure dal DOM al component oppure in entrambe le direzioni.
+  Esistono quattro tipi di binding:
+
+  Interpolazione, passa al DOM una proprietà di tipo value e si scrive {{value}}
+
+  Property Binding, permette di passare al DOM il valore di una proprietà selezinata da un selettore
+  parent a un selettore child e si scrive [proprerty] = "value"
+
+  Event Binding permette di richiamare dal component un metodo (headler) e si scrive (event) = "headler"
+
+  Double Binding lega i dati di un applicazione con un elemento di tipo input come avviene per esempio
+  in una form e si scrive [(ng-model)] = "property"
+
+  LE DIRETTIVE PREDEFINITE
+  In Angular esistono tre tipi di direttive:
+  -Component;
+    -di Attributo;
+    -Strutturali;
+
+  COMPONENT
+  Controllano il comportamento di una specifica view tramite una classe typescript,
+  all'interno di un component è possibile inserire un costruttore (constructor) che è un metodo
+  che si attiva quando si crea un nuovo oggetto (una delle possibili istanze della classe),
+  definendo al suo interno altre variabili e metodi.
+  al di fuori del costruttori abbiamo altri metodi e proprietà
+
+  DIRETTIVE DI ATTRIBUTO
+  NGSTYLE
+  Le direttive di attributo possono essere NgStyle o NgClass che vanno a modificare lo stile
+  di un elemento HTML rendendo i CSS programmabili
+  Gli ngStyle si scrivono [ngStyle] = "nomeAttributo";
+  NGCLASS
+  Con ng class possiamo assgenare dinamicamente delle classi a un qualsiasi
+  attributo html tramite delle valutazioni fatte in precedenza.
+  Gli ngClass si scrivono [ngClass] = "nomeAttributo";
+
+  DIRETTIVE STRUTTURALI
+  Le direttive strutturali consentono di modificare la composizione del DOM
+  aggiungendo, modificando e rimuovendo elementi. di questa direttiva fanno
+  parte ngIf ngFor ngSwitch
+  NGIF
+  Permette di aggiungere o rimouvere un elemento dal dom tramite un costrutto condizionale si scrive *ngIf= "condizione true"
+  NGFOR
+  permette di leggere i contenuti per esempio di una lista (come un ciclo for) e visualizzarli nel DOM *ngFor= "ciclo for"
+  NGSWITCH
+  permette di visualizzare all'interno di una lista quegli elementi che soddisfano una determinata condizione booleana
+-->
